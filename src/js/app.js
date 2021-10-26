@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */

@@ -16,13 +16,13 @@ export default class Character {
     }
 
     if (
-      typeof type === 'string'
-      || type === 'Bowerman'
+      (typeof type === 'string')
+      && (type === 'Bowerman'
       || type === 'Swordsman'
       || type === 'Magician'
       || type === 'Daemon'
       || type === 'Undead'
-      || type === 'Zombie'
+      || type === 'Zombie')
     ) {
       this.type = type;
     } else {
