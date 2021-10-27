@@ -5,11 +5,13 @@
 /* eslint-disable linebreak-style */
 export default class Character {
   constructor(name, type) {
-    this.name = name;
     this.health = 100;
     this.level = 1;
+    const heroes = ['Bowerman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
 
-    if (name.length < 2 || name.length > 10 || typeof name !== 'string') {
+    if ((name.length >= 2 && name.length <= 10) && (typeof name === 'string')) {
+      this.name = name;
+    } else {
       throw new Error(
         'Имя должно быть строкой и содержать от 2 до 10 символов.',
       );
@@ -17,12 +19,7 @@ export default class Character {
 
     if (
       (typeof type === 'string')
-      && (type === 'Bowerman'
-      || type === 'Swordsman'
-      || type === 'Magician'
-      || type === 'Daemon'
-      || type === 'Undead'
-      || type === 'Zombie')
+      && (heroes.includes(type))
     ) {
       this.type = type;
     } else {
